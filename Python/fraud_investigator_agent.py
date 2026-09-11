@@ -843,6 +843,10 @@ def main() -> None:
         api_key=api_key,
         temperature=0.1,
         max_tokens=1024,
+        # See rag_query_engine.py's load_policy_query_engine() for why this is
+        # needed -- llama-index-llms-anthropic's own model whitelist can lag
+        # behind current model names and raise ValueError at construction time.
+        context_window=200_000,
     )
 
     start = time.time()

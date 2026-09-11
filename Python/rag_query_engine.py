@@ -659,6 +659,15 @@ def main() -> None:
         api_key=api_key,
         temperature=config.llm_temperature,
         max_tokens=config.llm_max_tokens,
+        # context_window is passed explicitly because llama-index-llms-anthropic
+        # validates `model` against its own hardcoded, version-pinned list of
+        # known models and raises ValueError("Unknown model: ...") for any name
+        # it doesn't recognize yet -- including current model names newer than
+        # whatever version of the package got resolved (hit for real on a fresh
+        # Streamlit Community Cloud deploy, which resolved a version predating
+        # "claude-sonnet-5"). Setting this explicitly skips that internal
+        # lookup entirely; 200_000 is Claude's standard context window.
+        context_window=200_000,
     )
 
     start = time.time()
