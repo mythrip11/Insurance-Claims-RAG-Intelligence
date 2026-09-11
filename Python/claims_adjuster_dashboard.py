@@ -125,6 +125,11 @@ except ImportError:
 
 try:
     from llama_index.llms.anthropic import Anthropic as LlamaIndexAnthropic
+    # See rag_query_engine.py's import block for why this is needed --
+    # llama-index-llms-anthropic's own hardcoded model whitelist can lag
+    # behind current model names and raise ValueError at call time.
+    from llama_index.llms.anthropic.utils import CLAUDE_MODELS as _CLAUDE_MODELS
+    _CLAUDE_MODELS.setdefault("claude-sonnet-5", 200_000)
 except ImportError:
     _MISSING.append("llama-index-llms-anthropic")
 
@@ -239,11 +244,6 @@ def _build_agent() -> Tuple[FraudInvestigatorAgent, logging.Logger]:
         api_key=api_key,
         temperature=0.1,
         max_tokens=1024,
-        # See rag_query_engine.py's load_policy_query_engine() for why this is
-        # needed -- llama-index-llms-anthropic's own model whitelist can lag
-        # behind current model names and raise ValueError at construction time
-        # (hit for real on the Streamlit Community Cloud deploy of this app).
-        context_window=200_000,
     )
 
     policy_engine = load_policy_query_engine(_QE_CONFIG, llm, logger)

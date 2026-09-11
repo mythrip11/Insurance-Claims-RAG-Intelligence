@@ -121,6 +121,20 @@ except ImportError:
 
 try:
     from llama_index.llms.anthropic import Anthropic as LlamaIndexAnthropic
+    # llama-index-llms-anthropic hard-codes a whitelist of "known" model names
+    # (llama_index.llms.anthropic.utils.CLAUDE_MODELS) and raises ValueError at
+    # call time -- "Unknown model: ...` -- for any name not in it, including
+    # current model names newer than whatever version of the package got
+    # resolved. Confirmed against the library's own source: there is NO
+    # constructor override for this (no `context_window=` kwarg exists on this
+    # class, despite that being a common pattern on other LlamaIndex LLM
+    # wrappers -- tried that first, it raised TypeError). Hit for real on a
+    # fresh Streamlit Community Cloud deploy of this app, which resolved a
+    # version predating "claude-sonnet-5". Fixed by patching the whitelist
+    # dict IN PLACE (mutating the object, not reassigning the name) so it
+    # works regardless of which module imported/aliased the lookup function.
+    from llama_index.llms.anthropic.utils import CLAUDE_MODELS as _CLAUDE_MODELS
+    _CLAUDE_MODELS.setdefault("claude-sonnet-5", 200_000)
 except ImportError:
     _MISSING.append("llama-index-llms-anthropic")
 
@@ -659,15 +673,6 @@ def main() -> None:
         api_key=api_key,
         temperature=config.llm_temperature,
         max_tokens=config.llm_max_tokens,
-        # context_window is passed explicitly because llama-index-llms-anthropic
-        # validates `model` against its own hardcoded, version-pinned list of
-        # known models and raises ValueError("Unknown model: ...") for any name
-        # it doesn't recognize yet -- including current model names newer than
-        # whatever version of the package got resolved (hit for real on a fresh
-        # Streamlit Community Cloud deploy, which resolved a version predating
-        # "claude-sonnet-5"). Setting this explicitly skips that internal
-        # lookup entirely; 200_000 is Claude's standard context window.
-        context_window=200_000,
     )
 
     start = time.time()
