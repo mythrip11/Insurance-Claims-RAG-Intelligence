@@ -99,7 +99,7 @@ Insurance fraud scoring is a real regulatory and fairness-sensitive domain. Two 
 
 ```
 Insurance Claims RAG Intelligence/
-├── Claude outputs/
+├── Python/
 │   ├── synthetic_data_generator.py        # Step 1: synthetic claims + policy docs
 │   ├── data_ingestion_pipeline.py         # Step 2: validation + chunking
 │   ├── embeddings_vectorstore_pipeline.py # Step 3: ONNX embeddings -> ChromaDB
@@ -130,7 +130,7 @@ git clone <your-repo-url> "Insurance Claims RAG Intelligence"
 cd "Insurance Claims RAG Intelligence"
 python3 -m venv .venv
 source .venv/bin/activate
-python3 -m pip install -r "Claude outputs/requirements.txt"
+python3 -m pip install -r "Python/requirements.txt"
 ```
 
 Create a `.env` file in the project root:
@@ -144,17 +144,17 @@ ANTHROPIC_API_KEY=sk-ant-...
 Run each stage in order the first time (all outputs land under `./data/`, so always run from the project root):
 
 ```bash
-python3 "Claude outputs/synthetic_data_generator.py"
-python3 "Claude outputs/data_ingestion_pipeline.py"
-python3 "Claude outputs/embeddings_vectorstore_pipeline.py"
-python3 "Claude outputs/rag_query_engine.py"        # optional: try the hybrid RAG router directly
-python3 "Claude outputs/fraud_investigator_agent.py" --top-n 5   # batch-investigate the 5 riskiest claims
+python3 "Python/synthetic_data_generator.py"
+python3 "Python/data_ingestion_pipeline.py"
+python3 "Python/embeddings_vectorstore_pipeline.py"
+python3 "Python/rag_query_engine.py"        # optional: try the hybrid RAG router directly
+python3 "Python/fraud_investigator_agent.py" --top-n 5   # batch-investigate the 5 riskiest claims
 ```
 
 Then launch the dashboard:
 
 ```bash
-streamlit run "Claude outputs/claims_adjuster_dashboard.py"
+streamlit run "Python/claims_adjuster_dashboard.py"
 ```
 
 This opens a browser tab at `http://localhost:8501`. From there you can review existing risk assessments or trigger a live investigation for any claim in the book.
@@ -186,7 +186,7 @@ docker run -p 8501:8501 --env-file .env -v "$(pwd)/data:/app/data" claims-rag-in
    git push -u origin main
    ```
 2. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub.
-3. Click **New app**, select this repository and branch, and set the main file path to `Claude outputs/claims_adjuster_dashboard.py`.
+3. Click **New app**, select this repository and branch, and set the main file path to `Python/claims_adjuster_dashboard.py`.
 4. Under **Advanced settings → Secrets**, add:
    ```
    ANTHROPIC_API_KEY = "sk-ant-..."

@@ -79,7 +79,7 @@ Design notes:
 Run (same pattern as Steps 1-5):
     cd ~/Desktop/Insurance\ Claims\ RAG\ Intelligence
     source .venv/bin/activate
-    streamlit run "Claude outputs/claims_adjuster_dashboard.py"
+    streamlit run "Python/claims_adjuster_dashboard.py"
 
 This opens a browser tab (usually http://localhost:8501). Leave the
 terminal open while using the dashboard -- both Streamlit's own messages
@@ -132,7 +132,7 @@ except ImportError:
 # duplicating any retrieval or agent logic. Add this script's own directory
 # to sys.path so the import works regardless of the caller's current
 # working directory, as long as all three files stay side by side in
-# "Claude outputs/" (same convention as Step 5 importing Step 4).
+# "Python/" (same convention as Step 5 importing Step 4).
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 try:
@@ -166,9 +166,9 @@ if _MISSING:
     print("        llama-index-llms-anthropic\n")
     print("If the missing item is 'rag_query_engine.py' or")
     print("'fraud_investigator_agent.py', make sure both scripts are sitting in")
-    print("the same 'Claude outputs/' folder as this one -- this dashboard reuses")
+    print("the same 'Python/' folder as this one -- this dashboard reuses")
     print("their code directly instead of duplicating it.\n")
-    print("Then re-run: streamlit run \"Claude outputs/claims_adjuster_dashboard.py\"")
+    print("Then re-run: streamlit run \"Python/claims_adjuster_dashboard.py\"")
     print("=" * 80)
     sys.exit(1)
 

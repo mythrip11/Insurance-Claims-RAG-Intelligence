@@ -102,7 +102,7 @@ except ImportError:
 # its retrieval logic (per the project hand-off notes). Add this script's
 # own directory to sys.path so the import works regardless of the caller's
 # current working directory, as long as both files stay side by side in
-# "Claude outputs/".
+# "Python/".
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 try:
@@ -132,7 +132,7 @@ if _MISSING:
     print("        python-dotenv llama-index-core llama-index-vector-stores-chroma \\")
     print("        llama-index-llms-anthropic\n")
     print("If the missing item is 'rag_query_engine.py', make sure Step 4's script")
-    print("is sitting in the same 'Claude outputs/' folder as this one -- Step 5")
+    print("is sitting in the same 'Python/' folder as this one -- Step 5")
     print("reuses its retrieval code directly instead of duplicating it.\n")
     print("Then re-run this script.")
     print("=" * 80)

@@ -25,12 +25,12 @@ WORKDIR /app
 
 # Copy only the requirements file first so dependency installation is
 # cached across rebuilds unless requirements.txt actually changes.
-COPY ["Claude outputs/requirements.txt", "Claude outputs/requirements.txt"]
+COPY ["Python/requirements.txt", "Python/requirements.txt"]
 RUN python3 -m pip install --no-cache-dir --upgrade pip \
-    && python3 -m pip install --no-cache-dir -r "Claude outputs/requirements.txt"
+    && python3 -m pip install --no-cache-dir -r "Python/requirements.txt"
 
 # Now copy the application code.
-COPY ["Claude outputs/", "Claude outputs/"]
+COPY ["Python/", "Python/"]
 COPY docker-entrypoint.sh /app/docker-entrypoint.sh
 RUN chmod +x /app/docker-entrypoint.sh
 
