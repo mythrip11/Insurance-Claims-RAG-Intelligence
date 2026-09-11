@@ -1,0 +1,22 @@
+{
+  "claim_id": "CLM-000718",
+  "risk_level": "medium",
+  "risk_score": 55,
+  "summary": "Claim CLM-000718 shows a notable gap between the claimed amount of 15000 dollars and the independently estimated loss value of 8820.70 dollars, roughly 70 percent higher, matching the record's own inflated loss value indicator. The claimant also has an above average number of prior claims, 5 versus a 2.62 baseline average, and reported the loss somewhat later than typical for home claims. No overlapping vendor, email, phone, or policy links were found with other claims, and the claim amount itself, while above average, is not an extreme statistical outlier.",
+  "red_flags_identified": [
+    "Inflated loss value: claimed amount is about 70 percent higher than the estimated loss value",
+    "Claim amount is 30 percent of policy limit versus a roughly 16 percent average for home claims",
+    "Number of previous claims (5) is nearly double the home policy average of 2.62, consistent with SOP guidance flagging frequent prior claims",
+    "Days to report (13) is more than 3 times the median for home claims (4 days)"
+  ],
+  "supporting_evidence": [
+    "claim_amount is 15000.0 versus estimated_loss_value of 8820.7, and the record's fraud_indicators field lists inflated_loss_value",
+    "claim_as_pct_of_limit is 30.0 versus baseline mean of 16.03 for home policies",
+    "num_previous_claims is 5 versus baseline avg_num_previous_claims of 2.62 for home policies",
+    "days_to_report is 13 versus baseline median days_to_report of 4.0 and mean of 5.86 for home policies",
+    "find_related_claims returned 0 matches on repair_vendor, claimant_email, claimant_phone, and policy_id, so no evidence of a staged claim ring"
+  ],
+  "related_claims": [],
+  "recommended_action": "Route to a human adjuster for a detailed valuation review, requesting an independent on site inspection and at least two to three repair quotes to verify the repair estimate against the estimated loss value, confirming depreciation was properly applied, and reviewing the claimant's prior claims history for frequency and timing patterns before payout approval.",
+  "confidence": 0.55
+}

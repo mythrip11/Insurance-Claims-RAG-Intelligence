@@ -1,0 +1,58 @@
+# Insurance Claims RAG Intelligence System
+# Python Dependencies - All steps
+#
+# NOTE: AI/RAG packages (llama-index, chromadb, anthropic) use minimum-
+# version pins (>=) instead of exact pins. That ecosystem publishes new
+# releases frequently and sometimes retracts specific patch versions (this
+# is what broke the original exact pin on
+# llama-index-embeddings-huggingface==0.1.2 -- that version was never
+# actually published). Minimum pins let pip resolve to whatever compatible
+# version is currently available.
+
+# Core Data Processing & Analytics
+pandas>=2.1.3
+numpy>=1.26.2
+python-dateutil>=2.8.2
+pytz>=2023.3
+
+# LLM & RAG Stack
+chromadb>=0.4.13
+llama-index-core>=0.10.0
+llama-index-vector-stores-chroma>=0.1.0   # Step 4: wraps Step 3's ChromaDB collection
+llama-index-llms-anthropic>=0.1.0         # Step 4: LlamaIndex <-> Claude API bridge
+llama-index-readers-file>=0.1.1
+
+# Deliberately NOT installed: sentence-transformers, llama-index-embeddings-huggingface
+# Both pull in PyTorch. PyPI has no PyTorch wheel newer than 2.2.2 for Intel
+# macOS, while modern transformers/sentence-transformers need PyTorch >= 2.5 --
+# an unfixable platform ceiling on this machine (hit in Step 3). Embeddings
+# instead use ChromaDB's own bundled ONNX export of all-MiniLM-L6-v2
+# (onnxruntime-based, no PyTorch) -- see Step 3 and Step 4 scripts.
+
+# LLM Providers (needed starting Step 4)
+anthropic>=0.34.0  # Claude API -- tool-use / structured extraction support
+# ollama>=0.1.0    # Uncomment for local Ollama support
+
+# Data Generation (needed for Step 1)
+faker>=20.1.0
+pydantic>=2.5.0
+
+# Environment & Config
+python-dotenv>=1.0.0   # Step 4: loads ANTHROPIC_API_KEY from .env
+
+# UI (needed starting Step 6)
+streamlit>=1.28.1
+plotly>=5.17.0
+
+# Testing
+pytest>=7.4.3
+pytest-cov>=4.1.0
+
+# Development Tools
+black>=23.11.0
+flake8>=6.1.0
+mypy>=1.7.1
+isort>=5.13.2
+
+# Utilities
+tqdm>=4.66.1  # Progress bars

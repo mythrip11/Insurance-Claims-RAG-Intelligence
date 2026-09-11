@@ -1,0 +1,13 @@
+services:
+  dashboard:
+    build: .
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      # Persist generated data (synthetic claims, ChromaDB store, risk
+      # assessments) on the host so it survives container rebuilds/restarts
+      # instead of being regenerated every time.
+      - ./data:/app/data
+    restart: unless-stopped

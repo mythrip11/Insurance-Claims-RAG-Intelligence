@@ -1,0 +1,25 @@
+{
+  "claim_id": "CLM-000203",
+  "risk_level": "medium",
+  "risk_score": 58,
+  "summary": "Claim CLM-000203 shows several moderate warning signs: an above-average number of prior claims, a notably delayed loss report, a claim amount that exceeds the estimated loss value, and minimal supporting documentation. The claim carries internal fraud-indicator flags for multiple claims, inflated loss value, and inconsistent narrative, though no shared vendor, contact, or policy overlaps with other claims were found, which argues against an organized ring. Overall this warrants a closer manual review but does not show the strong, corroborated multi-source evidence needed for a high/critical rating.",
+  "red_flags_identified": [
+    "Number of previous claims (5) is roughly double the auto-policy baseline average (2.48)",
+    "Days to report (34) is about 6x the baseline mean/median (5.36/4.0) for auto claims, indicating a delayed report",
+    "Claim amount ($17,000) exceeds the estimated loss value ($11,325.09) by about 50%",
+    "Only 1 supporting document on file, which is sparse documentation",
+    "Internal system fraud indicators flagged: multiple_claims, inflated_loss_value, inconsistent_narrative",
+    "Loss description and adjuster notes are vague/incoherent, consistent with the flagged 'inconsistent_narrative' indicator"
+  ],
+  "supporting_evidence": [
+    "Claim record: num_previous_claims=5 vs baseline avg_num_previous_claims=2.48",
+    "Claim record: days_to_report=34 vs baseline days_to_report mean=5.36, median=4.0",
+    "Claim record: claim_amount=17000.0 vs estimated_loss_value=11325.09 and repair_estimate=19751.37",
+    "Claim record: supporting_docs_count=1",
+    "Claim record fraud_indicators field: 'multiple_claims|inflated_loss_value|inconsistent_narrative' with fraud_confidence_score=0.47",
+    "find_related_claims returned 0 matches on repair_vendor, claimant_email, claimant_phone, and policy_id, showing no cross-claim vendor/contact overlap"
+  ],
+  "related_claims": [],
+  "recommended_action": "Escalate for manual adjuster review: request additional supporting documentation, verify loss description/photos against adjuster notes, and confirm the 34-day reporting delay with the claimant before proceeding with settlement.",
+  "confidence": 0.55
+}

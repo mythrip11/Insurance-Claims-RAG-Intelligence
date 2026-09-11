@@ -1,0 +1,22 @@
+{
+  "claim_id": "CLM-000470",
+  "risk_level": "high",
+  "risk_score": 65,
+  "summary": "Claim CLM-000470 shows a substantially delayed report, 38 days versus an umbrella-policy average of 5.7 days, and a claim amount roughly 56 percent above the estimated loss value, both of which are documented fraud red flags. The claim record itself carries system-flagged indicators for multiple claims, inflated loss value, missing documentation, and delayed reporting, alongside a moderate internal fraud confidence score of 0.55. No overlapping vendor, contact, or policy identifiers were found with other claims, so there is no evidence of a coordinated staged-claim ring at this time.",
+  "red_flags_identified": [
+    "Delayed reporting: 38 days to report vs. umbrella baseline mean of 5.66 days (median 5 days)",
+    "Inflated claim amount: $15,000 claimed vs. $9,617.76 estimated loss value (about 56% higher)",
+    "Claim-to-limit ratio (30%) is nearly double the umbrella baseline average (16.2%)",
+    "Record's own fraud_indicators field flags multiple_claims, inflated_loss_value, missing_documentation, and delayed_reporting",
+    "Moderate internal fraud_confidence_score of 0.55 attached to the claim record"
+  ],
+  "supporting_evidence": [
+    "get_claim_record: days_to_report=38, claim_amount=15000.0, estimated_loss_value=9617.76, claim_as_pct_of_limit=30.0, fraud_indicators field lists multiple_claims, inflated_loss_value, missing_documentation, delayed_reporting, fraud_confidence_score=0.55",
+    "get_baseline_statistics for umbrella: days_to_report mean=5.66/median=5.0, claim_amount mean=10722.95, claim_as_pct_of_limit mean=16.21, avg_num_previous_claims=2.69, fraud_rate=0.0728",
+    "find_related_claims returned 0 related claims across repair_vendor, claimant_email, claimant_phone, and policy_id",
+    "search_policy_guidance: SOP lists delayed reporting, claim amount significantly exceeding loss estimate, and missing documentation as recognized fraud red flags, with a 0.5-0.8 score warranting SIU referral"
+  ],
+  "related_claims": [],
+  "recommended_action": "Refer to the Special Investigations Unit for extended review per SOP guidance for claims in the 0.5 to 0.8 risk range. Verify documentation completeness, confirm the repair estimate from Ferguson PLC against independent quotes, and require a claimant inspection or interview to explain the 38 day reporting delay and the gap between claim amount and estimated loss value before payout.",
+  "confidence": 0.6
+}

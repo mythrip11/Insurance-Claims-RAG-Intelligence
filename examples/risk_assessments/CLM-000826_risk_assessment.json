@@ -1,0 +1,23 @@
+{
+  "claim_id": "CLM-000826",
+  "risk_level": "medium",
+  "risk_score": 52,
+  "summary": "CLM-000826 shows several elevated risk signals relative to home-policy baselines: reporting was delayed 52 days versus a homeowners policy requirement of 24-hour notification and a baseline average of under 6 days, the claimant has 5 previous claims versus a baseline average of 2.62, and the claimed amount ($22,000, 44% of policy limit) is well above both the baseline average claim size and the estimated loss value of $13,439. The claim record's own fraud indicator flags corroborate multiple_claims, inconsistent_narrative, and delayed_reporting. No overlapping vendor, contact, or policy connections were found linking this claim to a broader staged-claim ring, so this appears to be an isolated case warranting deeper documentation review rather than evidence of an organized scheme.",
+  "red_flags_identified": [
+    "Delayed reporting: 52 days versus homeowners policy's 24-hour notification requirement and a dataset baseline average of ~5.9 days",
+    "Elevated prior claim frequency: 5 previous claims versus a home-policy baseline average of 2.62",
+    "Claim amount ($22,000) is roughly double the home-policy baseline average claim ($10,627) and is an outlier relative to the baseline standard deviation",
+    "Claim-to-limit ratio of 44% far exceeds the baseline average of 16%",
+    "Claim amount ($22,000) diverges notably from the estimated loss value ($13,439), a ~64% overstatement",
+    "Claim record's own fraud_indicators field explicitly flags multiple_claims, inconsistent_narrative, and delayed_reporting"
+  ],
+  "supporting_evidence": [
+    "get_claim_record: days_to_report = 52, claim_amount = $22,000, claim_as_pct_of_limit = 44.0, num_previous_claims = 5, estimated_loss_value = $13,439.14, fraud_indicators = 'multiple_claims|inconsistent_narrative|delayed_reporting', fraud_confidence_score = 0.41",
+    "get_baseline_statistics (home): mean days_to_report = 5.86 (median 4.0), mean claim_amount = $10,627.25 (std 5,598.33), mean claim_as_pct_of_limit = 16.03%, avg_num_previous_claims = 2.62, historical fraud_rate = 6.07%",
+    "search_policy_guidance: homeowners policies require reporting within 24 hours of loss; 3+ claims in 12 months is an explicit SOP fraud trigger; claim amounts significantly exceeding loss estimates are a listed red flag",
+    "find_related_claims: 0 related claims found across repair_vendor, claimant_email, claimant_phone, and policy_id, indicating no evidence of a multi-claim fraud ring"
+  ],
+  "related_claims": [],
+  "recommended_action": "Escalate to extended investigation per SOP (risk score in the 0.2-0.5 medium band): obtain third-party/independent repair estimates, verify the loss narrative against photographic or on-site inspection evidence, confirm the claimant's prior claim history and timing, and clarify reasons for the 52-day reporting delay before final adjudication. Reassess for SIU referral if inconsistencies are confirmed.",
+  "confidence": 0.6
+}

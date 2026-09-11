@@ -1,0 +1,35 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Generated data (fully reproducible via the pipeline scripts -- see README "Usage")
+# Remove this line if you want a self-contained public demo repo / Streamlit Cloud
+# deployment that doesn't need to regenerate data on first load.
+data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Personal files not part of this project
+Mythri_Potluri.docx
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
