@@ -13,10 +13,12 @@ venv/
 env/
 ENV/
 
-# Generated data (fully reproducible via the pipeline scripts -- see README "Usage")
-# Remove this line if you want a self-contained public demo repo / Streamlit Cloud
-# deployment that doesn't need to regenerate data on first load.
-data/
+# NOTE: data/ is intentionally committed (not ignored). It's fully synthetic
+# (see Step 1, seeded/reproducible) and small (~1.5MB), and committing it lets
+# a fresh clone or a Streamlit Community Cloud deploy boot with a ready-to-go
+# demo instead of regenerating the whole pipeline on first load. If you'd
+# rather keep this repo reproducible-only, re-add "data/" here and regenerate
+# locally via the Usage steps below.
 
 # OS
 .DS_Store

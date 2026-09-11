@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "policy_01_commercial_auto_insurance_chunk_00",
+    "source_file": "policy_01_commercial_auto_insurance.txt",
+    "policy_title": "COMMERCIAL AUTO INSURANCE POLICY",
+    "chunk_index": 0,
+    "text": "COMMERCIAL AUTO INSURANCE POLICY\nVersion: 2024-Q1\nEffective Date: January 1, 2024\n\nCOVERAGE LIMITS:\n- Bodily Injury Liability: $100,000 per person / $300,000 per accident\n- Property Damage Liability: $50,000 per accident\n- Uninsured Motorist: $50,000 per person\n\nEXCLUSIONS:\n1. Claims filed more than 90 days after loss date\n2. Intentional loss or damage\n3. Racing, speed contests, or illegal activity\n4. Mechanical or electrical failure not caused by collision\n\nCLAIMS PROCEDURE:\n1. Report claim within 7 days of loss\n2. Submit complete documentation (photos, police report)\n3. Schedule adjuster inspection within 14 days\n4. Submit repair estimates from licensed vendors\n\nDEDUCTIBLES:\n- Collision: $500\n- Comprehensive: $250\n- Liability: $0",
+    "word_count": 110
+  },
+  {
+    "chunk_id": "policy_02_homeowners_insurance_chunk_00",
+    "source_file": "policy_02_homeowners_insurance.txt",
+    "policy_title": "HOMEOWNERS INSURANCE POLICY",
+    "chunk_index": 0,
+    "text": "HOMEOWNERS INSURANCE POLICY\nContract Number: HOP-2024-001\nPolicy Period: 12 months\n\nCOVERED PERILS:\n- Fire and smoke damage\n- Theft and vandalism\n- Weather damage (hail, wind)\n- Liability for bodily injury\n\nNOT COVERED:\n- Flood damage (separate policy required)\n- Earthquake\n- Wear and tear\n- Claims without supporting evidence\n\nCOVERAGE AMOUNTS:\n- Dwelling: $300,000\n- Personal Property: $150,000\n- Liability: $100,000\n\nREPORTING REQUIREMENTS:\n- Call within 24 hours of loss\n- Preserve all damage evidence\n- Obtain written estimates (minimum 2)\n- File claim within 6 months",
+    "word_count": 88
+  },
+  {
+    "chunk_id": "policy_03_fraud_investigation_sop_chunk_00",
+    "source_file": "policy_03_fraud_investigation_sop.txt",
+    "policy_title": "FRAUD INVESTIGATION & CLAIMS SOP",
+    "chunk_index": 0,
+    "text": "FRAUD INVESTIGATION & CLAIMS SOP Version: 3.2 | Updated: 2024-01-15 RED FLAGS FOR INVESTIGATION: 1. Multiple claims within 12 months (3+) 2. Claim filed within 90 days of policy inception 3. Claim amount significantly exceeds policy estimate 4. Missing or inconsistent documentation 5. Unusually high repair costs from unverified vendors 6. Claimant unavailable for inspection 7. Loss description conflicts with photographic evidence INVESTIGATIVE STEPS: 1. INITIAL REVIEW (Day 1-2) - Verify policy status and coverage - Validate claimant information - Obtain loss description narrative 2. DOCUMENTATION REVIEW (Day 3-5) - Collect supporting documents - Verify third-party reports (police, fire) - Obtain repair estimates (3+ vendors) 3. ON-SITE INSPECTION (Day 6-10) - Photograph all damage - Compare damage to claim narrative - Interview claimant and witnesses 4. RISK ASSESSMENT (Day 11-14) - Calculate fraud risk score - Review prior claim history - Identify similar patterns in database 5. DECISION & RESOLUTION",
+    "word_count": 150
+  },
+  {
+    "chunk_id": "policy_03_fraud_investigation_sop_chunk_01",
+    "source_file": "policy_03_fraud_investigation_sop.txt",
+    "policy_title": "FRAUD INVESTIGATION & CLAIMS SOP",
+    "chunk_index": 1,
+    "text": "- Interview claimant and witnesses 4. RISK ASSESSMENT (Day 11-14) - Calculate fraud risk score - Review prior claim history - Identify similar patterns in database 5. DECISION & RESOLUTION (Day 15-21) - Approve, deny, or request additional info - Document all findings - Close case with summary report FRAUD RISK SCORING: - Score 0.0-0.2: Low risk - Process normally - Score 0.2-0.5: Medium risk - Extended investigation - Score 0.5-0.8: High risk - Referral to SIU - Score 0.8-1.0: Critical - Deny and report to authorities",
+    "word_count": 87
+  },
+  {
+    "chunk_id": "policy_04_claims_adjuster_guidelines_chunk_00",
+    "source_file": "policy_04_claims_adjuster_guidelines.txt",
+    "policy_title": "CLAIMS ADJUSTER GUIDELINES",
+    "chunk_index": 0,
+    "text": "CLAIMS ADJUSTER GUIDELINES\nRevision: 2.1\n\nDOCUMENTATION REQUIREMENTS:\nAll claims must include:\n\u2713 Completed claim form (signed and dated)\n\u2713 Photo evidence (before/after, damage, serial numbers)\n\u2713 Receipt or proof of ownership\n\u2713 Police report (if applicable)\n\u2713 Repair estimates (2-3 quotes minimum)\n\u2713 Receipts for completed repairs\n\nLOSS VALUATION PRINCIPLES:\n- Actual Cash Value (ACV) = Replacement Cost - Depreciation\n- Depreciation applies to items over 5 years old\n- No coverage for labor if DIY work performed\n- Parts replacement price + reasonable labor only\n\nCOMMON CLAIM ERRORS TO AVOID:\n1. Accepting round-number claims without verification\n2. Approving claims without proper photo documentation\n3. Processing claims from unverified vendors\n4. Ignoring prior claim history flags\n5. Skipping on-site inspection for high-value claims\n\nDISPUTE RESOLUTION:\nIf claimant disputes denial:\n1. Provide detailed written explanation\n2. Reference specific policy language\n3. Offer appeal process information\n4. Document all communications",
+    "word_count": 148
+  },
+  {
+    "chunk_id": "policy_05_underwriting_standards_chunk_00",
+    "source_file": "policy_05_underwriting_standards.txt",
+    "policy_title": "INSURANCE POLICY UNDERWRITING STANDARDS",
+    "chunk_index": 0,
+    "text": "INSURANCE POLICY UNDERWRITING STANDARDS\nEffective: 2024-01-01\n\nRISK ASSESSMENT CRITERIA:\n1. APPLICANT HISTORY\n   - No more than 2 claims in 5 years (new policies)\n   - Minimum 3 months since last claim\n   - Clean driving record or equivalent\n\n2. PROPERTY CONDITIONS\n   - Maintained in good repair\n   - No evidence of previous loss\n   - Security systems for high-value items\n\n3. COVERAGE RECOMMENDATIONS\n   - Auto: Minimum 100/300/50 liability limits\n   - Home: Replacement cost endorsement advised\n   - Umbrella: Recommended if assets exceed $500K\n\nEXCLUSIONS SUMMARY:\n- Intentional damage or loss\n- Violation of policy conditions\n- Use for commercial purposes (unless endorsed)\n- Claims involving fraud or misrepresentation\n\nPREMIUM CALCULATION FACTORS:\n- Loss history (past 5 years)\n- Age and condition of property\n- Geographic location and risk\n- Type and amount of coverage\n- Claims frequency (key variable)",
+    "word_count": 134
+  },
+  {
+    "chunk_id": "policy_06_digital_documentation_guide_chunk_00",
+    "source_file": "policy_06_digital_documentation_guide.txt",
+    "policy_title": "DIGITAL DOCUMENTATION & CLAIMS SUBMISSION GUIDE",
+    "chunk_index": 0,
+    "text": "DIGITAL DOCUMENTATION & CLAIMS SUBMISSION GUIDE\nVersion: 1.0\n\nACCEPTED FILE FORMATS:\n\u2713 PDF documents\n\u2713 JPG/PNG photos (2MB max per file)\n\u2713 MP4 video evidence\n\u2713 Scanned receipts\n\u2717 Faxes (poor quality)\n\u2717 Original documents without scans\n\nPHOTO SUBMISSION GUIDELINES:\n1. Wide shots showing full extent of damage\n2. Close-ups of specific damage areas\n3. Evidence of ownership (serial numbers, labels)\n4. Timestamp or date stamp on photos\n5. Include reference objects for scale\n\nONLINE PORTAL REQUIREMENTS:\n- Username must match policy holder name\n- All dates in MM/DD/YYYY format\n- File size limit: 50MB per submission\n- Keep password secure (never share)\n- Save confirmation number for reference\n\nSECURITY & PRIVACY:\n- All data encrypted in transit (HTTPS)\n- PII protected per CCPA regulations\n- Access logs maintained for audit\n- Third-party access requires authorization",
+    "word_count": 136
+  },
+  {
+    "chunk_id": "policy_07_auto_insurance_claim_specifics_chunk_00",
+    "source_file": "policy_07_auto_insurance_claim_specifics.txt",
+    "policy_title": "AUTO INSURANCE CLAIM SPECIFICS",
+    "chunk_index": 0,
+    "text": "AUTO INSURANCE CLAIM SPECIFICS\nPolicy Type: CA, UT, WA, CO\n\nCOVERAGE TYPES:\n- Liability: Injury/damage you cause to others\n- Collision: Damage from collision (regardless of fault)\n- Comprehensive: Non-collision damage (theft, weather)\n- Uninsured Motorist: Hit by uninsured driver\n\nCOMMON AUTO CLAIM ISSUES:\n1. Lack of police report (required for theft)\n2. Contradictory accident descriptions\n3. Inflated repair estimates\n4. Failure to pursue uninsured motorist recovery\n5. Claims involving commercial use\n\nREPAIR REQUIREMENTS:\n- Use network or pre-approved shops\n- Get estimate approval before repairs\n- Submit repair invoices within 30 days\n- Keep damaged parts for inspection\n\nRENTAL CAR COVERAGE:\n- Typically $30/day for 30 days maximum\n- Must be through approved rental companies\n- Provided at no cost if comprehensive/collision",
+    "word_count": 123
+  },
+  {
+    "chunk_id": "policy_08_health_disability_claims_chunk_00",
+    "source_file": "policy_08_health_disability_claims.txt",
+    "policy_title": "HEALTH & DISABILITY INSURANCE CLAIMS",
+    "chunk_index": 0,
+    "text": "HEALTH & DISABILITY INSURANCE CLAIMS\nEffective: 2024-Q1\n\nCLAIM DOCUMENTATION:\nMedical claims require:\n- Provider invoice\n- Itemized bill with diagnosis/procedure codes\n- Proof of payment\n- EOB from primary insurance (if applicable)\n\nDISABILITY CLAIMS require:\n- Attending physician statement\n- Proof of inability to work\n- Tax return (last 2 years)\n- Detailed treatment plan\n\nCOMMON DENIAL REASONS:\n1. Pre-existing condition exclusion\n2. Exceeds annual benefit limit\n3. Non-covered service\n4. Claim filed outside time limit\n\nAPPEAL PROCESS:\n1. Request detailed denial reason (5 days)\n2. Gather additional medical evidence\n3. Submit written appeal with documentation\n4. Review committee decision (30 days)\n5. Independent external review (if denied again)",
+    "word_count": 109
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "claim_id": "CLM-000203",
+  "risk_level": "high",
+  "risk_score": 65,
+  "summary": "Claim CLM-000203 shows several behavioral and financial anomalies relative to auto policy baselines: a reporting delay roughly 8x the typical median, a claimed amount exceeding the estimated loss value by about 50 percent, and a prior-claims count nearly double the baseline average. No vendor, email, phone, or policy overlaps with other claims were found, so there is no evidence of a coordinated fraud ring. The claim record itself is also pre-tagged with multiple fraud indicators, consistent with the patterns identified here.",
+  "red_flags_identified": [
+    "Reporting delay significantly above baseline (34 days vs median 4 days for auto claims)",
+    "Claim amount inflated relative to estimated loss value (17000 claimed vs 11325 estimated loss, about 50 percent higher)",
+    "Repair estimate of 19751 exceeds both claim amount and estimated loss, suggesting possible cost inflation",
+    "Elevated prior claims count of 5 versus baseline average of 2.48 for auto policyholders",
+    "Only 1 supporting document provided, which is minimal documentation for a 17000 dollar claim",
+    "Claim record's own fraud indicators field flags multiple_claims, inflated_loss_value, and inconsistent_narrative",
+    "Loss description and adjuster notes appear garbled and non-substantive, consistent with an inconsistent narrative flag"
+  ],
+  "supporting_evidence": [
+    "get_claim_record: days_to_report=34 vs baseline median=4 for auto claims",
+    "get_claim_record: claim_amount=17000.0 vs estimated_loss_value=11325.09, and claim_as_pct_of_limit=17.0 percent which is close to baseline mean of 16.09 percent so not an outlier on a policy-limit basis, but an outlier versus estimated loss",
+    "get_claim_record: repair_estimate=19751.37, higher than both claim_amount and estimated_loss_value",
+    "get_claim_record: num_previous_claims=5 vs baseline avg_num_previous_claims=2.48",
+    "get_claim_record: supporting_docs_count=1",
+    "get_claim_record: fraud_indicators field equals multiple_claims, inflated_loss_value, inconsistent_narrative with fraud_confidence_score=0.47",
+    "find_related_claims: 0 related claims found across repair_vendor, claimant_email, claimant_phone, and policy_id, indicating no detected ring activity"
+  ],
+  "related_claims": [],
+  "recommended_action": "Escalate for detailed manual review: verify the loss narrative against any photographic or police documentation, obtain independent third-party repair estimates, and confirm the reason for the 34 day reporting delay before settlement. Do not treat as automatic denial, but prioritize for adjuster inspection given the combination of red flags.",
+  "confidence": 0.6
+}

@@ -1,0 +1,43 @@
+FRAUD INVESTIGATION & CLAIMS SOP
+Version: 3.2 | Updated: 2024-01-15
+
+RED FLAGS FOR INVESTIGATION:
+1. Multiple claims within 12 months (3+)
+2. Claim filed within 90 days of policy inception
+3. Claim amount significantly exceeds policy estimate
+4. Missing or inconsistent documentation
+5. Unusually high repair costs from unverified vendors
+6. Claimant unavailable for inspection
+7. Loss description conflicts with photographic evidence
+
+INVESTIGATIVE STEPS:
+1. INITIAL REVIEW (Day 1-2)
+   - Verify policy status and coverage
+   - Validate claimant information
+   - Obtain loss description narrative
+
+2. DOCUMENTATION REVIEW (Day 3-5)
+   - Collect supporting documents
+   - Verify third-party reports (police, fire)
+   - Obtain repair estimates (3+ vendors)
+
+3. ON-SITE INSPECTION (Day 6-10)
+   - Photograph all damage
+   - Compare damage to claim narrative
+   - Interview claimant and witnesses
+
+4. RISK ASSESSMENT (Day 11-14)
+   - Calculate fraud risk score
+   - Review prior claim history
+   - Identify similar patterns in database
+
+5. DECISION & RESOLUTION (Day 15-21)
+   - Approve, deny, or request additional info
+   - Document all findings
+   - Close case with summary report
+
+FRAUD RISK SCORING:
+- Score 0.0-0.2: Low risk - Process normally
+- Score 0.2-0.5: Medium risk - Extended investigation
+- Score 0.5-0.8: High risk - Referral to SIU
+- Score 0.8-1.0: Critical - Deny and report to authorities

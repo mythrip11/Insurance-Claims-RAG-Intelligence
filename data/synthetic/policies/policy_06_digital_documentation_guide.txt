@@ -1,0 +1,30 @@
+DIGITAL DOCUMENTATION & CLAIMS SUBMISSION GUIDE
+Version: 1.0
+
+ACCEPTED FILE FORMATS:
+✓ PDF documents
+✓ JPG/PNG photos (2MB max per file)
+✓ MP4 video evidence
+✓ Scanned receipts
+✗ Faxes (poor quality)
+✗ Original documents without scans
+
+PHOTO SUBMISSION GUIDELINES:
+1. Wide shots showing full extent of damage
+2. Close-ups of specific damage areas
+3. Evidence of ownership (serial numbers, labels)
+4. Timestamp or date stamp on photos
+5. Include reference objects for scale
+
+ONLINE PORTAL REQUIREMENTS:
+- Username must match policy holder name
+- All dates in MM/DD/YYYY format
+- File size limit: 50MB per submission
+- Keep password secure (never share)
+- Save confirmation number for reference
+
+SECURITY & PRIVACY:
+- All data encrypted in transit (HTTPS)
+- PII protected per CCPA regulations
+- Access logs maintained for audit
+- Third-party access requires authorization

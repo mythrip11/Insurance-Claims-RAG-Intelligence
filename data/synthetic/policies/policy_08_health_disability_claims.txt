@@ -1,0 +1,28 @@
+HEALTH & DISABILITY INSURANCE CLAIMS
+Effective: 2024-Q1
+
+CLAIM DOCUMENTATION:
+Medical claims require:
+- Provider invoice
+- Itemized bill with diagnosis/procedure codes
+- Proof of payment
+- EOB from primary insurance (if applicable)
+
+DISABILITY CLAIMS require:
+- Attending physician statement
+- Proof of inability to work
+- Tax return (last 2 years)
+- Detailed treatment plan
+
+COMMON DENIAL REASONS:
+1. Pre-existing condition exclusion
+2. Exceeds annual benefit limit
+3. Non-covered service
+4. Claim filed outside time limit
+
+APPEAL PROCESS:
+1. Request detailed denial reason (5 days)
+2. Gather additional medical evidence
+3. Submit written appeal with documentation
+4. Review committee decision (30 days)
+5. Independent external review (if denied again)

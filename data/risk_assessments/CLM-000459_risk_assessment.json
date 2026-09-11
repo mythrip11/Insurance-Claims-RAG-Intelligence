@@ -1,0 +1,24 @@
+{
+  "claim_id": "CLM-000459",
+  "risk_level": "high",
+  "risk_score": 68,
+  "summary": "This umbrella policy claim shows a significantly delayed report of 32 days versus a 5-6 day baseline, a claimed amount of 9,000 that is about 22 percent above the independently estimated loss value of 7,384.82, and a repair estimate from a single vendor that exceeds both the claim amount and estimated loss, consistent with the case record's own flagged indicators for inflated loss value and suspicious repair quotes. The claimant also has an above-average history of prior claims, 5 versus a 2.69 baseline average, though no shared vendor, contact, or policy overlaps with other claims were found, arguing against an organized ring but not against individual exaggeration.",
+  "red_flags_identified": [
+    "Delayed reporting: 32 days to report vs. umbrella baseline mean of 5.66 days, roughly 6x the norm",
+    "Inflated loss value: claim amount of 9000 is about 22 percent higher than the estimated loss value of 7384.82",
+    "Suspicious repair quotes: single-vendor repair estimate of 10176.84 exceeds both the claim amount and estimated loss value, with no evidence of competitive quotes",
+    "Elevated prior claims frequency: 5 previous claims vs. baseline average of 2.69 for umbrella policyholders",
+    "Claim record's own fraud_indicators field flags inflated_loss_value, delayed_reporting, and suspicious_repair_quotes"
+  ],
+  "supporting_evidence": [
+    "Claim record: days_to_report = 32 vs baseline umbrella mean 5.66 and median 5.0",
+    "Claim record: claim_amount = 9000.0 vs estimated_loss_value = 7384.82, about 22 percent gap",
+    "Claim record: repair_estimate = 10176.84 from vendor Moore-Lewis, higher than both claim amount and estimated loss value",
+    "Claim record: num_previous_claims = 5 vs baseline avg_num_previous_claims = 2.69 for umbrella policies",
+    "Claim record fraud_indicators field explicitly lists inflated_loss_value, delayed_reporting, and suspicious_repair_quotes",
+    "find_related_claims returned 0 matches on vendor, email, phone, or policy_id, indicating no evidence of a multi-claim staged ring"
+  ],
+  "related_claims": [],
+  "recommended_action": "Escalate for manual review: request itemized documentation and at least one additional independent repair quote, verify the Moore-Lewis estimate against on-site inspection and photos, and question the claimant on the 32-day reporting delay before payout approval.",
+  "confidence": 0.6
+}

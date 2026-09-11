@@ -1,0 +1,19 @@
+{
+  "claim_id": "CLM-000001",
+  "risk_level": "low",
+  "risk_score": 10,
+  "summary": "Claim CLM-000001 shows no significant fraud indicators. The claim amount and days-to-report are both in line with umbrella policy baselines, no overlapping vendors, contact details, or policy IDs were found with other claims, and the claim was not filed shortly after policy inception. The claimant's prior claim count is modestly above the category average but not itself alarming.",
+  "red_flags_identified": [],
+  "supporting_evidence": [
+    "Claim amount $3,371.70 is well below the umbrella policy mean of $10,722.95, so it is not an outlier.",
+    "Days to report (5) matches the umbrella baseline mean of 5.66 days, indicating no unusual reporting delay.",
+    "Loss date (2025-12-20) is about 11 months after policy start (2025-01-24), well outside the 90-day early-claim red flag window.",
+    "Claim amount ($3,371.70) does not exceed the repair estimate ($3,930.17) or estimated loss value ($3,536.31), so there is no overstatement pattern.",
+    "find_related_claims returned 0 matches across repair_vendor, claimant_email, claimant_phone, and policy_id, indicating no overlap with other claims.",
+    "The claim record's own fraud_indicators field is NONE and fraud_confidence_score is 0.0.",
+    "num_previous_claims is 4, versus baseline average of 2.69 for umbrella policies -- a mild elevation but not by itself a strong red flag per SOP (which flags 3+ claims within a 12-month period, a timeframe not confirmed here)."
+  ],
+  "related_claims": [],
+  "recommended_action": "Process claim through normal review channel; no escalation to SIU needed at this time.",
+  "confidence": 0.75
+}

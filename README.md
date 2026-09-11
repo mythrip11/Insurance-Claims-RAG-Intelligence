@@ -191,7 +191,9 @@ docker run -p 8501:8501 --env-file .env -v "$(pwd)/data:/app/data" claims-rag-in
    ```
    ANTHROPIC_API_KEY = "sk-ant-..."
    ```
-5. Deploy. Note that Streamlit Community Cloud's filesystem is ephemeral and ChromaDB/the synthetic data won't already exist there — either commit the generated `data/` directory to the repo for a always-ready public demo, or add a one-time setup step in the app itself. (This project's `.gitignore` excludes `data/` by default since it's fully reproducible; if you want a public demo to work out of the box, remove that line and commit `data/synthetic/`, `data/processed/`, and `data/chroma_db/`.)
+5. Deploy. Streamlit Community Cloud's filesystem is ephemeral, so this repo commits the generated `data/` directory (`data/synthetic/`, `data/processed/`, `data/chroma_db/`, `data/risk_assessments/`) rather than regenerating the pipeline on first load — it's fully synthetic (Step 1, seeded/reproducible), not sensitive, and small (~1.5MB total), so the deployed app boots ready-to-go.
+
+**Note on the live "Investigate this claim" button:** it makes a real, billed Anthropic API call against the key configured above. This is left fully functional in the public deployment (rather than disabled) so visitors can see the actual agent working end to end, not just a static view — a deliberate tradeoff given how low-traffic a portfolio link realistically is. If you fork this for a more exposed deployment, consider adding rate limiting or disabling live investigation for anonymous visitors.
 
 ## Example Output
 
@@ -199,6 +201,7 @@ A sample of the agent's real, live-verified output is committed in [`examples/ri
 
 ## Known Limitations & Tradeoffs
 
+- **Public deployment leaves live API calls enabled.** The Streamlit Cloud deployment's "Investigate this claim" button makes a real, billed Anthropic API call using the deployer's key. This was a deliberate choice (see [Deploying to Streamlit Community Cloud](#deploying-to-streamlit-community-cloud)) to keep the public demo fully functional rather than read-only, accepting low realistic abuse risk for a portfolio link.
 - **Synthetic data only.** The claims book and policy documents are generated (Step 1, seeded and reproducible), not real claims data. The ground-truth validation panel in the dashboard only works because of this.
 - **`requirements.txt` uses minimum-version pins (`>=`), not exact pins**, deliberately — this ecosystem (LlamaIndex, the Anthropic SDK) moves fast, and this project has already hit real bugs from both a floating version resolving something newer than expected *and* from an exact pin referencing a version that was later retracted from PyPI. Pin exactly if you need long-term reproducibility; expect to occasionally re-verify against a newer resolved version otherwise.
 - **The model occasionally needs a validation retry.** On live runs, the underlying model appends stray tool-calling-style markup into free-text fields on a meaningful fraction of investigations (observed around 60%). This is always caught by the schema validator before it can reach a final report — nothing malformed ever ships — but each caught case costs one extra API round trip. This was evaluated and deliberately left as-is rather than spending further effort tuning it away, since the system is already correct and the cost is a UX latency tradeoff, not a correctness one.

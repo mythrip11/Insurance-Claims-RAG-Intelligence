@@ -1,0 +1,25 @@
+{
+  "claim_id": "CLM-000718",
+  "risk_level": "medium",
+  "risk_score": 55,
+  "summary": "This home claim shows a meaningful gap between the claimed amount of $15,000 and the independently estimated loss value of $8,820.70, roughly a 70 percent inflation that aligns with the claim's own inflated_loss_value fraud indicator. The claim amount also exceeds the repair vendor's estimate, consumes nearly double the average share of the policy limit compared to other home claims, and was reported later and with more prior claims history than typical for this policy type. No overlapping vendors, contacts, or unusual policy-linked claim clusters were found, so there is no evidence of a staged-claim ring, but the loss-value discrepancy and elevated claim metrics warrant closer documentation review before payout.",
+  "red_flags_identified": [
+    "Claim amount significantly exceeds the estimated loss value (inflated_loss_value flag)",
+    "Claim amount exceeds the vendor's own repair estimate",
+    "Claim represents an unusually high percentage of the policy limit relative to baseline",
+    "Days-to-report is notably higher than the typical home-claim reporting window",
+    "Elevated number of previous claims on this policyholder relative to baseline average"
+  ],
+  "supporting_evidence": [
+    "claim_amount 15000.0 vs estimated_loss_value 8820.7 (about 70% higher)",
+    "claim_amount 15000.0 vs repair_estimate 14058.8 (claim exceeds vendor estimate by ~6.7%)",
+    "claim_as_pct_of_limit 30.0% vs home-policy baseline mean of 16.03%",
+    "days_to_report 13 vs home-policy baseline mean 5.86 / median 4",
+    "num_previous_claims 5 vs home-policy baseline average 2.62",
+    "fraud_indicators field on the claim record explicitly lists 'inflated_loss_value'",
+    "find_related_claims returned zero matches on repair_vendor, claimant_email, claimant_phone, or policy_id"
+  ],
+  "related_claims": [],
+  "recommended_action": "Escalate for manual review: request itemized proof of loss, additional repair quotes, and conduct an on-site inspection before payout. Verify basis for claimed amount against the independent loss estimate before approving any settlement above the estimated loss value.",
+  "confidence": 0.6
+}

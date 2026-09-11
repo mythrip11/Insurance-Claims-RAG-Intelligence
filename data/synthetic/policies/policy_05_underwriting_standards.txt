@@ -1,0 +1,31 @@
+INSURANCE POLICY UNDERWRITING STANDARDS
+Effective: 2024-01-01
+
+RISK ASSESSMENT CRITERIA:
+1. APPLICANT HISTORY
+   - No more than 2 claims in 5 years (new policies)
+   - Minimum 3 months since last claim
+   - Clean driving record or equivalent
+
+2. PROPERTY CONDITIONS
+   - Maintained in good repair
+   - No evidence of previous loss
+   - Security systems for high-value items
+
+3. COVERAGE RECOMMENDATIONS
+   - Auto: Minimum 100/300/50 liability limits
+   - Home: Replacement cost endorsement advised
+   - Umbrella: Recommended if assets exceed $500K
+
+EXCLUSIONS SUMMARY:
+- Intentional damage or loss
+- Violation of policy conditions
+- Use for commercial purposes (unless endorsed)
+- Claims involving fraud or misrepresentation
+
+PREMIUM CALCULATION FACTORS:
+- Loss history (past 5 years)
+- Age and condition of property
+- Geographic location and risk
+- Type and amount of coverage
+- Claims frequency (key variable)
