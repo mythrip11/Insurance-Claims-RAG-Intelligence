@@ -1,11 +1,11 @@
 # Insurance Claims RAG Intelligence System
-## Step 1: Foundational Configuration & Synthetic Data Generation
+## Foundational Configuration & Synthetic Data Generation
 
 ---
 
 ## 📋 Overview
 
-**Step 1** establishes the foundation of your insurance fraud detection RAG system:
+This step establishes the foundation of your insurance fraud detection RAG system:
 
 1. **Project Architecture** - Hybrid RAG pipeline (visualized)
 2. **Project Structure** - Production-grade folder layout
@@ -284,7 +284,7 @@ Faker.seed(42)
 
 ## 📝 Summary
 
-**Step 1 Complete!** You now have:
+You now have:
 
 ✅ **Production-grade project structure** - Ready for team collaboration  
 ✅ **1,000 synthetic claims** - With realistic fraud patterns  
@@ -292,7 +292,7 @@ Faker.seed(42)
 ✅ **Seeded reproducibility** - Consistent data generation  
 ✅ **Complete documentation** - For onboarding + understanding  
 
-**Next:** Move to **Step 2: Data Ingestion & Preprocessing**
+
 
 ---
 
