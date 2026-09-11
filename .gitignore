@@ -33,3 +33,4 @@ Mythri_Potluri.docx
 .pytest_cache/
 .coverage
 htmlcov/
+docker-compose.override.yml
