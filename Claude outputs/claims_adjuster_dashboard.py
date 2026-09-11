@@ -463,7 +463,7 @@ def _render_validation_panel(overview: "pd.DataFrame") -> None:
         investigated[["claim_id", "policy_type", "is_fraud", "risk_level", "risk_score", "agent_confidence"]]
         .rename(columns={"is_fraud": "actual_is_fraud"})
         .sort_values("risk_score", ascending=False),
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
     st.caption(
@@ -583,7 +583,7 @@ def main() -> None:
                 category_orders={"risk_level": RISK_ORDER},
             )
             fig.update_layout(showlegend=False, xaxis_title=None, yaxis_title="Claims")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
         else:
             st.info("No claims investigated yet. Select one below and click 'Investigate now'.")
 
@@ -591,7 +591,7 @@ def main() -> None:
         st.subheader("fraud_confidence_score distribution (full book)")
         fig2 = px.histogram(overview, x="fraud_confidence_score", nbins=30)
         fig2.update_layout(xaxis_title="fraud_confidence_score", yaxis_title="Claims")
-        st.plotly_chart(fig2, use_container_width=True)
+        st.plotly_chart(fig2, width="stretch")
 
     # ---- Table ----
     st.subheader(f"Claims ({len(filtered):,} shown of {total_claims:,})")
@@ -602,7 +602,7 @@ def main() -> None:
     ]
     st.dataframe(
         filtered[display_cols].sort_values("fraud_confidence_score", ascending=False),
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         column_config={
             "claim_amount": st.column_config.NumberColumn("Claim amount", format="$%.2f"),
