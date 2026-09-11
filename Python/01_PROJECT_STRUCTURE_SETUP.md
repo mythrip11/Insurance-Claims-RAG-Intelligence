@@ -258,11 +258,3 @@ python verify_setup.py
 
 ---
 
-## 📝 Next Step
-
-Once you've completed the setup above and run verification successfully, I'll provide **the Synthetic Data Generator Script** (Step 1 Main Deliverable).
-
-**Checkpoint:** When ready, reply with:
-> "Step 1A-1D Setup Complete"
-
-Then we'll proceed to the production-grade synthetic data generator that creates 1,000 realistic claims with seeded fraud patterns.
