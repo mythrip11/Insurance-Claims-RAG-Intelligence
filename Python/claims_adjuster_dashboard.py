@@ -473,7 +473,7 @@ def _render_validation_panel(overview: "pd.DataFrame") -> None:
     )
     st.caption(
         "\"Flagged\" = AI risk level is high or critical. Ground truth is the "
-        "synthetic `is_fraud` label from Step 1's data generator -- available "
+        "synthetic `is_fraud` label from the claims generator -- available "
         "here only because this is a portfolio dataset with known labels."
     )
 
@@ -488,7 +488,7 @@ def main() -> None:
         "AI Co-Investigator risk assessments over the claims book. Every "
         "score below is traceable to a real tool call (claim lookup, "
         "cross-claim matching, policy search, or baseline statistics) -- "
-        "see Step 5 for the full design."
+        "not just plausible-sounding text."
     )
 
     try:
@@ -531,15 +531,16 @@ def main() -> None:
 
     with st.sidebar.expander("About this system"):
         st.markdown(
-            "- **Data:** 1,000 synthetic claims + 8 policy/SOP docs (Step 1)\n"
-            "- **Retrieval:** ChromaDB + ONNX MiniLM embeddings (Step 3), "
-            "LlamaIndex hybrid router over policy docs + structured claims "
-            "(Step 4)\n"
+            "- **Data:** 1,000 synthetic claims + 8 policy/SOP docs\n"
+            "- **Retrieval:** ChromaDB + ONNX MiniLM embeddings, "
+            "with a LlamaIndex hybrid router over policy docs + structured "
+            "claims\n"
             "- **Agent:** hand-rolled multi-turn tool-use loop over the raw "
             "Anthropic SDK -- 4 deterministic read tools + a Pydantic-"
-            "validated `submit_risk_assessment` terminal tool (Step 5)\n"
-            "- **This dashboard:** presentation layer only, reuses Steps 4-5 "
-            "directly (Step 6)"
+            "validated `submit_risk_assessment` terminal tool\n"
+            "- **This dashboard:** a presentation layer only -- it calls "
+            "the same agent and retrieval code directly, no separate logic "
+            "of its own"
         )
 
     # ---- Filtering ----
