@@ -4,6 +4,8 @@ An end-to-end fraud-investigation system for insurance claims: a hybrid RAG know
 
 Built as a portfolio project to demonstrate production-style generative AI engineering on top of a classical fraud-analytics background: not a single-prompt demo, but a system with a real data pipeline, a bounded and self-correcting agent loop, schema-validated structured output, and an interactive UI — plus the real bugs that surfaced building it, and how they were diagnosed and fixed (see [Engineering Highlights](#engineering-highlights) below).
 
+![Claims Fraud Risk Dashboard -- overview with KPIs and risk breakdown](docs/dashboard-overview.png)
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -198,6 +200,8 @@ docker run -p 8501:8501 --env-file .env -v "$(pwd)/data:/app/data" claims-rag-in
 ## Example Output
 
 A sample of the agent's real, live-verified output is committed in [`examples/risk_assessments/`](examples/risk_assessments/) so you can see the shape of a result without running anything. Each file is a schema-validated `RiskAssessment`: a risk level and 0-100 score, a plain-English summary, a list of red flags and supporting evidence (each grounded in an actual tool call), any related claims found, a recommended action, and the agent's own confidence.
+
+![AI Co-Investigator assessment panel for a real investigated claim, showing risk score, confidence, and tool-grounded red flags](docs/dashboard-claim-detail.png)
 
 ## Known Limitations & Tradeoffs
 
